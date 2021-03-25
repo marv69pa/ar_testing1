@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ar Viewer Test</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <style>
+
+    model-viewer {
+          width: 400px;
+          height: 600px;
+          margin: 0 auto;
+    }
+    .Hotspot {
+      background: #fff;
+      border-radius: 32px;
+      border: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 24px;
+      padding: 8px;
+      position: relative;
+      transition: opacity 0.3s;
+      width: 24px;
+    }
+
+    .Hotspot:not([data-visible]) {
+      background: transparent;
+      border: 4px solid #fff;
+      box-shadow: none;
+      height: 32px;
+      pointer-events: none;
+      width: 32px;
+    }
+
+    .Hotspot:focus {
+      border: 4px solid rgb(0, 128, 200);
+      height: 32px;
+      outline: none;
+      width: 32px;
+    }
+
+    .Hotspot>* {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+
+    .HotspotAnnotation {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(0, 0, 0, 0.8);
+      display: block;
+      font-family: Futura, Helvetica Neue, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      left: calc(100% + 1em);
+      max-width: 128px;
+      padding: 0.5em 1em;
+      position: absolute;
+      top: 50%;
+      width: max-content;
+    }
+
+    .Hotspot:not([data-visible])>* {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(calc(-50% + 4px));
+      transition: transform 0.3s, opacity 0.3s;
+    }
+  </style>
+
+<body>
+  <model-viewer src="asset\FoldingTable_BL2.9.glb" shadow-intensity="3.2" exposure="0.69" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
+    <button class="Hotspot" slot="hotspot-1" data-position="-0.007375257285159809m 0.2502816073038095m 0.05134142730006766m" data-normal="-0.19481385402284837m 0.0033302237620323866m 0.9808345792693379m" data-visibility-attribute="visible">
+      <div class="HotspotAnnotation">Test1</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.013425620114048948m 0.3930732683294322m -0.005055011045374233m" data-normal="0.4759363278949639m 0.001427947401250158m 0.879478580043924m" data-visibility-attribute="visible">
+      <div class="HotspotAnnotation">Test2</div>
+    </button>
+  </model-viewer>
+  <center><p><b>AR Viewer Test - Bally Design</b></p>
+  
+
+
+
+</body>
+
+</html>
