@@ -75,12 +75,10 @@
   </style>
 
 <body>
-  <model-viewer src="asset\single_refrigerator.glb" shadow-intensity="3.2" exposure="0.69" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
-    <button class="Hotspot" slot="hotspot-1" data-position="-0.007375257285159809m 0.2502816073038095m 0.05134142730006766m" data-normal="-0.19481385402284837m 0.0033302237620323866m 0.9808345792693379m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">Test1</div>
-    </button><button class="Hotspot" slot="hotspot-3" data-position="0.013425620114048948m 0.3930732683294322m -0.005055011045374233m" data-normal="0.4759363278949639m 0.001427947401250158m 0.879478580043924m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">Test2</div>
-    </button>
+  <model-viewer src="asset\single_refrigerator.glb" shadow-intensity="3.2" ar ar-scale="fixed" exposure="0.69" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
+    <button slot="ar-button" id="ar-button">
+    View in your space
+  </button>
   </model-viewer>
   <center><p><b>AR Viewer Test - Bally Design</b></p>
   
